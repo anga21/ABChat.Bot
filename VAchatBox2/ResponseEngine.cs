@@ -27,11 +27,11 @@ namespace VAchatBox2
 
 
                     if (MatchesAny(lower, "how are you", "you okay"))
-                        return "I am fully operational and ready to keep you safe, " + UserName + "!";
+                        return "I am fullyOJIH operational and ready to keep you safe, " + UserName + "!";
 
 
           if(MatchesAny(lower, "purpose", "what do you do", "help", "topics","what can"))
-                return GetTopicsList();
+                  return GetTopicsList();
 
             if (MatchesAny(lower, "password", "passwords", "passphrase") )
                 return GetPasswordAdvice();
