@@ -54,7 +54,7 @@ namespace VAchatBox2
             WriteColour("🐳" + new string('=', width) + "🐳", borderColor);
 
         }
-        //THE WRITECOLOUR MAKES SURE THAT THE TEXT IS WRITEN IN COLOR 
+       
 
         public static void PrintBotMessage(string message)
         {
@@ -87,6 +87,7 @@ namespace VAchatBox2
             PrintDivider('─', 60, ConsoleColor.Blue);
 
         }
+
         public static void PrintLogo()
         {
             Console.Clear();
