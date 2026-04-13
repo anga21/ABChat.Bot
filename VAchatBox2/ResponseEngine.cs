@@ -118,7 +118,7 @@ namespace VAchatBox2
                    "  Install antivirus software\n" +
                    "  Keep your system updated\n" +
                    "  Avoid downloading unknown files\n\n" +
-                   "Stay protected, " + UserName + "!";
+                   "Stay protected," + UserName + "!";
         }
 
              private string GetSafeBrowsingAdvice()
@@ -127,7 +127,7 @@ namespace VAchatBox2
                    "  Look for HTTPS in URLs\n" +
                    "  Avoid suspicious websites\n" +
                    "  Use a VPN on public networks\n\n" +
-                   "Browse smart, " + UserName + "!";
+                   "Browse smart," + UserName + "!";
         }
 
         private string GetMFAAdvice() {
@@ -162,7 +162,7 @@ namespace VAchatBox2
                    "  Limit personal info shared online\n" +
                    "  Use strong privacy settings\n" +
                    "  Monitor for breaches\n\n" +
-                   "Protect your digital footprint, " + UserName + "!";
+                   "Protect your digital footprint, " + UserName +"!";
      }
     }
 }
