@@ -77,6 +77,7 @@ namespace VAchatBox2
             string sentiment = DetectSentiment(lower);
             string sentimentPrefix = GetSentimentPrefix(sentiment);
 
+
             
             if (MatchesAny(lower, new[] { "more", "another", "again",
                                    "tell me more", "give me another",
@@ -109,7 +110,7 @@ namespace VAchatBox2
             }
 
             
-            if (MatchesAny(lower, new[] { "quit", "bye", "goodbye", "exit" }))
+            if (MatchesAny(lower, new[] { "quit", "bye", "goodbye","exit" }))
                 return "QUIT_SIGNAL";
 
             foreach (var entry in _keywordMap)
@@ -117,7 +118,7 @@ namespace VAchatBox2
                 if (MatchesAny(lower, entry.Value))
                 {
                     _lastTopic = entry.Key;
-                    if (!_mentionedTopics.Contains(entry.Key))
+                    if (!_mentionedTopics.Contains(entry.Key)) 
                         _mentionedTopics.Add(entry.Key);
                     return sentimentPrefix + GetAdviceForTopic(entry.Key);
                 }
