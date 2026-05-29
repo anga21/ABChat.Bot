@@ -1,18 +1,18 @@
 ﻿using System;
+using System.Windows.Forms;
 
 namespace VAchatBox2
 {
 
-    class Program
-    {  static void Main(string[] args)
+   static class Program
+    {  
+        [STAThread]
+        static void Main()
         {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new ChatForm());
 
-            Console.OutputEncoding = System.Text.Encoding.UTF8;
-            Console.Title = "Cybersecurity Aweareness Bot ";
-
-
-            ChatBot bot = new ChatBot();
-            bot.Run();
         }
 
      }
