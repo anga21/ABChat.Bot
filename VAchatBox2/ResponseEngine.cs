@@ -89,7 +89,7 @@ namespace VAchatBox2
                            GetAdviceForTopic(_lastTopic);
                 else
                     return "What topic would you like more on? " +
-                           "Type 'topics' to see what I can help with.";
+                           "Type 'topics' to see what I can help with."; 
             }
 
            
