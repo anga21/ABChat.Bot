@@ -67,10 +67,10 @@
             this.tabChat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(20)))), ((int)(((byte)(40)))));
             this.tabChat.Controls.Add(this.rtbChat);
             this.tabChat.Controls.Add(this.pnlInput);
-            this.tabChat.Location = new System.Drawing.Point(4, 31);
+            this.tabChat.Location = new System.Drawing.Point(4, 24);
             this.tabChat.Name = "tabChat";
             this.tabChat.Padding = new System.Windows.Forms.Padding(4);
-            this.tabChat.Size = new System.Drawing.Size(876, 546);
+            this.tabChat.Size = new System.Drawing.Size(876, 553);
             this.tabChat.TabIndex = 0;
             this.tabChat.Text = "Chat";
             // 
@@ -85,7 +85,7 @@
             this.rtbChat.Name = "rtbChat";
             this.rtbChat.ReadOnly = true;
             this.rtbChat.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.rtbChat.Size = new System.Drawing.Size(868, 492);
+            this.rtbChat.Size = new System.Drawing.Size(868, 499);
             this.rtbChat.TabIndex = 0;
             this.rtbChat.Text = "";
             // 
@@ -96,7 +96,7 @@
             this.pnlInput.Controls.Add(this.btnSend);
             this.pnlInput.Controls.Add(this.btnQuiz);
             this.pnlInput.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlInput.Location = new System.Drawing.Point(4, 496);
+            this.pnlInput.Location = new System.Drawing.Point(4, 503);
             this.pnlInput.Name = "pnlInput";
             this.pnlInput.Padding = new System.Windows.Forms.Padding(6);
             this.pnlInput.Size = new System.Drawing.Size(868, 46);
@@ -111,7 +111,7 @@
             this.txtInput.ForeColor = System.Drawing.Color.White;
             this.txtInput.Location = new System.Drawing.Point(6, 6);
             this.txtInput.Name = "txtInput";
-            this.txtInput.Size = new System.Drawing.Size(686, 31);
+            this.txtInput.Size = new System.Drawing.Size(686, 23);
             this.txtInput.TabIndex = 0;
             this.txtInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtInput_KeyDown);
             // 
@@ -150,10 +150,10 @@
             this.tabTasks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(20)))), ((int)(((byte)(40)))));
             this.tabTasks.Controls.Add(this.grpAddTask);
             this.tabTasks.Controls.Add(this.grpTasks);
-            this.tabTasks.Location = new System.Drawing.Point(4, 31);
+            this.tabTasks.Location = new System.Drawing.Point(4, 24);
             this.tabTasks.Name = "tabTasks";
             this.tabTasks.Padding = new System.Windows.Forms.Padding(4);
-            this.tabTasks.Size = new System.Drawing.Size(876, 546);
+            this.tabTasks.Size = new System.Drawing.Size(876, 553);
             this.tabTasks.TabIndex = 1;
             this.tabTasks.Text = "Task Assistant";
             // 
@@ -172,7 +172,7 @@
             this.grpAddTask.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(210)))), ((int)(((byte)(50)))));
             this.grpAddTask.Location = new System.Drawing.Point(374, 4);
             this.grpAddTask.Name = "grpAddTask";
-            this.grpAddTask.Size = new System.Drawing.Size(498, 538);
+            this.grpAddTask.Size = new System.Drawing.Size(498, 545);
             this.grpAddTask.TabIndex = 0;
             this.grpAddTask.TabStop = false;
             this.grpAddTask.Text = "Add a New Task";
@@ -197,7 +197,7 @@
             this.dtpReminder.Location = new System.Drawing.Point(14, 206);
             this.dtpReminder.MinDate = new System.DateTime(2026, 6, 26, 0, 0, 0, 0);
             this.dtpReminder.Name = "dtpReminder";
-            this.dtpReminder.Size = new System.Drawing.Size(200, 29);
+            this.dtpReminder.Size = new System.Drawing.Size(200, 22);
             this.dtpReminder.TabIndex = 1;
             this.dtpReminder.Visible = false;
             // 
@@ -242,7 +242,7 @@
             this.txtTaskTitle.ForeColor = System.Drawing.Color.White;
             this.txtTaskTitle.Location = new System.Drawing.Point(14, 48);
             this.txtTaskTitle.Name = "txtTaskTitle";
-            this.txtTaskTitle.Size = new System.Drawing.Size(320, 30);
+            this.txtTaskTitle.Size = new System.Drawing.Size(320, 22);
             this.txtTaskTitle.TabIndex = 5;
             // 
             // lblTaskTitle
@@ -266,7 +266,7 @@
             this.grpTasks.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(200)))), ((int)(((byte)(220)))));
             this.grpTasks.Location = new System.Drawing.Point(4, 4);
             this.grpTasks.Name = "grpTasks";
-            this.grpTasks.Size = new System.Drawing.Size(370, 538);
+            this.grpTasks.Size = new System.Drawing.Size(370, 545);
             this.grpTasks.TabIndex = 1;
             this.grpTasks.TabStop = false;
             this.grpTasks.Text = "Your Cybersecurity Tasks";
@@ -278,10 +278,10 @@
             this.lstTasks.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lstTasks.Font = new System.Drawing.Font("Consolas", 9F);
             this.lstTasks.ForeColor = System.Drawing.Color.White;
-            this.lstTasks.ItemHeight = 22;
-            this.lstTasks.Location = new System.Drawing.Point(3, 25);
+            this.lstTasks.ItemHeight = 14;
+            this.lstTasks.Location = new System.Drawing.Point(3, 18);
             this.lstTasks.Name = "lstTasks";
-            this.lstTasks.Size = new System.Drawing.Size(364, 442);
+            this.lstTasks.Size = new System.Drawing.Size(364, 456);
             this.lstTasks.TabIndex = 0;
             // 
             // btnComplete
@@ -291,7 +291,7 @@
             this.btnComplete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnComplete.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold);
             this.btnComplete.ForeColor = System.Drawing.Color.White;
-            this.btnComplete.Location = new System.Drawing.Point(3, 467);
+            this.btnComplete.Location = new System.Drawing.Point(3, 474);
             this.btnComplete.Name = "btnComplete";
             this.btnComplete.Size = new System.Drawing.Size(364, 34);
             this.btnComplete.TabIndex = 1;
@@ -306,7 +306,7 @@
             this.btnDeleteTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteTask.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold);
             this.btnDeleteTask.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteTask.Location = new System.Drawing.Point(3, 501);
+            this.btnDeleteTask.Location = new System.Drawing.Point(3, 508);
             this.btnDeleteTask.Name = "btnDeleteTask";
             this.btnDeleteTask.Size = new System.Drawing.Size(364, 34);
             this.btnDeleteTask.TabIndex = 2;
@@ -319,10 +319,10 @@
             this.tabLog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(20)))), ((int)(((byte)(40)))));
             this.tabLog.Controls.Add(this.lstLog);
             this.tabLog.Controls.Add(this.btnRefreshLog);
-            this.tabLog.Location = new System.Drawing.Point(4, 31);
+            this.tabLog.Location = new System.Drawing.Point(4, 24);
             this.tabLog.Name = "tabLog";
             this.tabLog.Padding = new System.Windows.Forms.Padding(4);
-            this.tabLog.Size = new System.Drawing.Size(876, 546);
+            this.tabLog.Size = new System.Drawing.Size(876, 553);
             this.tabLog.TabIndex = 2;
             this.tabLog.Text = "Activity Log";
             // 
@@ -333,10 +333,10 @@
             this.lstLog.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lstLog.Font = new System.Drawing.Font("Consolas", 9F);
             this.lstLog.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(175)))), ((int)(((byte)(200)))));
-            this.lstLog.ItemHeight = 22;
+            this.lstLog.ItemHeight = 14;
             this.lstLog.Location = new System.Drawing.Point(4, 4);
             this.lstLog.Name = "lstLog";
-            this.lstLog.Size = new System.Drawing.Size(868, 502);
+            this.lstLog.Size = new System.Drawing.Size(868, 509);
             this.lstLog.TabIndex = 0;
             // 
             // btnRefreshLog
@@ -346,7 +346,7 @@
             this.btnRefreshLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefreshLog.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Bold);
             this.btnRefreshLog.ForeColor = System.Drawing.Color.Black;
-            this.btnRefreshLog.Location = new System.Drawing.Point(4, 506);
+            this.btnRefreshLog.Location = new System.Drawing.Point(4, 513);
             this.btnRefreshLog.Name = "btnRefreshLog";
             this.btnRefreshLog.Size = new System.Drawing.Size(868, 36);
             this.btnRefreshLog.TabIndex = 1;
