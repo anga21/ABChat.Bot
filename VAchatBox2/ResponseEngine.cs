@@ -17,7 +17,7 @@ namespace VAchatBox2
         {
             { "password", new[] { "password", "passwords", "passphrase" } },
             { "phishing", new[] { "phishing", "scam email", "fake email", "scam" } },
-            { "malware",  new[] { "malware", "virus", "ransomware", "spyware", "trojan" } },
+            { "malware",  new[] { "malware", "virus", "ransomeware", "spyware", "trojan" } },
             { "browsing", new[] { "browsing", "safe browsing", "https", "vpn", "website" } },
             { "2fa",      new[] { "2fa", "mfa", "two factor", "authenticator" } },
             { "social",   new[] { "social engineering", "vishing", "smishing", "pretexting" } },
