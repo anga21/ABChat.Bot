@@ -1,53 +1,116 @@
-ABChat-Cybersecurity Awareness Chatbot
+# ABChat — Cybersecurity Awareness Bot
 
-ABChat is a C# console-based chatbot designed to promote and raise
-cybersecurity awareness.
-It is interactve with users through GUI ,voice massege and ASCII art .ABChat provides helpful safety tips and creates a more engaging learning experience.
+A Windows Forms Cybersecurity Awareness Chatbot built in C# with MySQL 
+database integration. ABChat educates users on cybersecurity topics through 
+an interactive GUI featuring a chat interface, task assistant, mini quiz, 
+NLP simulation, and activity logging.
 
- Features
+---
 
-Voice greeting played from a custom WAV file on startup.
-ASCII art logo displayed in a dark-themed GUI.
-Personalised responses using the user's name.
-Keyword-based response engine covering eight cybersecurity topics.
-Random tip selection so the same question gives varied answers.
-Sentiment detection that adjusts responses based on the user's tone.
-Memory system that remembers the user's favourite topic.
-Conversation flow support for follow-up questions like "tell me more".
-Input validation for empty, short, or unrecognised queries.
-Clean exit sequence when the user types quit or bye.
+## Features
 
-Technologies Used
+-  **Chat** — Keyword-based cybersecurity advice with sentiment detection
+-  **Task Assistant** — Add, complete, and delete tasks stored in MySQL
+-  **Quiz Game** — 16 questions (MCQ + True/False) with score feedback
+-  **NLP Simulation** — Natural language commands via chat input
+-  **Activity Log** — Timestamped record of all bot actions
+-  **Voice Greeting** — Text-to-speech welcome on startup
 
- C# \.NET.
- Console Application.
- System.Speech / WAV audio playback.
- GitHub Actions (CI).
- System.Windows.Forms/GUI controls and SoundPlayer .
- System.Drawing	/Colours, fonts, and graphics.
+---
 
+## Technologies Used
 
-How It Works
+| Technology | Purpose |
+|---|---|
+| C# / .NET Framework 4.7.2 | Primary language |
+| Windows Forms | GUI framework |
+| MySQL 8.0 | Task and log storage |
+| MySql.Data NuGet | MySQL connector |
+| System.Speech | Voice greeting |
 
-The chatbot uses a Response Engine to process user input.
-A VoiceGreeting class plays an audio welcome message.
-A Windows popup prompts user for for nae .
-WindForm Window contains logo,slogan and welcome statement. 
-User enters questions text area .
-User input is handled through a loop for continuous interaction.
-Tips and appropriate responses to users input .
+---
 
-Project Structure
+## Setup and Installation
 
-ChatBot.cs.
-ChatForm.cs.
-ResponseEngine.cs.
-ConsoleUI.cs.
-greeting.wav.
-github/workflows/dotnet.yml.
+**1. Clone the repository**
+```bash
 
+```
 
-Author
--Angaho Lishivha
+**2. Install MySql.Data NuGet package**
+- Right-click project → Manage NuGet Packages → Browse → `MySql.Data` → Install
 
+**3. Run this SQL in MySQL Workbench**
+```sql
+CREATE DATABASE IF NOT EXISTS abchat_db;
+USE abchat_db;
 
+CREATE TABLE IF NOT EXISTS tasks (
+    id            INT AUTO_INCREMENT PRIMARY KEY,
+    title         VARCHAR(200) NOT NULL,
+    description   TEXT,
+    reminder_date DATE NULL,
+    is_completed  TINYINT(1) DEFAULT 0,
+    created_at    DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS activity_log (
+    id        INT AUTO_INCREMENT PRIMARY KEY,
+    action    VARCHAR(500) NOT NULL,
+    logged_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+**4. Update connection string in `DatabaseManager.cs`**
+```csharp
+private const string ConnStr =
+    "Server=localhost;Database=abchat_db;Uid=root;Pwd=YourPasswordHere;";
+```
+
+**5. Build and run**
+- Press `Ctrl+Shift+B` to build then `F5` to run
+
+---
+
+## NLP Chat Commands
+
+| Type this | What happens |
+|---|---|
+| `add task Enable 2FA` | Creates a new task |
+| `remind me to update password` | Sets a reminder task |
+| `show my tasks` | Lists tasks in chat |
+| `start quiz` | Starts the quiz game |
+| `show activity log` | Shows recent actions |
+| `topics` / `help` | Lists all chat topics |
+| `bye` / `quit` | Ends the session |
+
+---
+
+## Project Structure
+AchatBox2/
+
+├── Program.cs            # Entry point
+
+├── ChatForm.cs           # Main GUI and logic
+
+├── ChatForm.Designer.cs  # Form control declarations
+
+├── ResponseEngine.cs     # NLP, keywords, sentiment
+
+├── QuizEngine.cs         # Quiz questions and scoring
+
+├── DatabaseManager.cs    # MySQL database operations
+
+├── VoiceGreeting.cs      # Text-to-speech greeting
+
+├── ConsoleUI.cs          # Console helper (Part 1/2)
+
+└── ChatBot.cs            # Console bot runner (Part 1/2)
+
+---
+
+## Author
+
+**LISHIVHA ANGAHO VENUS**  
+---
+*ABChat — Making your security as easy as ABC*
